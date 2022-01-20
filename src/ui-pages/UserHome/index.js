@@ -7,28 +7,27 @@ import { connect } from "react-redux";
 
 const styles = {
   root: {
-    display:"flex",
-    width:"100vw"
+    // display:"flex",
+    width: "100%"
   }
 };
 
 class UserHome extends Component {
-
   render() {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-          <Content />
+        <Content />
       </div>
     );
   }
 }
 
-const mapStateToProps=({screenConfiguration={}})=>{
-  const {preparedFinalObject={}}=screenConfiguration
-  const {userInfo={}}=preparedFinalObject;
-  return {userInfo}
-}
+const mapStateToProps = ({ screenConfiguration = {} }) => {
+  const { preparedFinalObject = {} } = screenConfiguration;
+  const { userInfo = {} } = preparedFinalObject;
+  return { userInfo };
+};
 
 export default connect(
   mapStateToProps,
