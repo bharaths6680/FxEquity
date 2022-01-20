@@ -1,8 +1,14 @@
-import { Typography, Grid } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 
 const styles = theme => ({
+  root: {
+    width: "100%",
+    height: "100%",
+    textAlign: "center",
+    padding: "40px 0px "
+  },
   header: {
     fontFamily: "RobotoBold",
     fontSize: "52px",
@@ -28,7 +34,7 @@ const styles = theme => ({
 
 const ComingSoon = ({ classes }) => {
   return (
-    <Grid style={{ width: "100%", textAlign: "center", padding: "40px 0px " }}>
+    <div className={classes.root}>
       <Typography className={classes.header}>Coming Soon!</Typography>
       <Typography className={classes.header1}>
         Thank you for your interest
@@ -36,9 +42,10 @@ const ComingSoon = ({ classes }) => {
       <img
         src={"ui-assets/images/coming-soon.svg"}
         alt="comingSoon"
-        width={"100%"}
+        width={"70%"}
+        height={"100%"}
       />
-    </Grid>
+    </div>
   );
 };
 export default withStyles(styles)(ComingSoon);

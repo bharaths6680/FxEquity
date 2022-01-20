@@ -173,8 +173,7 @@ const styles = theme => ({
       display: "flex",
       margin: "0px 11px 0px 11px !important"
     },
-    overflowX: "auto",
-    overflowY: "auto",
+    overflow: "hidden",
     width: "100%",
     // display: "-webkit-box",
     maxHeight: 320,
